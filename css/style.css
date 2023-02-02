@@ -1,61 +1,178 @@
-/* reset */
-
-html, body, h1, h2, p {
+html, body, h1, p, h2, wiki {
     padding: 0;
     margin: 0;
 }
-
-figure {
+figure{
     padding: 0;
     margin: 0;
     line-height: 0;
 }
-
 img {
     width: 100%;
     height: auto;
 }
+/*More*/
 
-/* style */
-
-.intro {
-    margin: 30px;
+.more {
+  
+    position: fixed;
+    top:20px;
+    right:30px;
+   
+    display: block;
+    color: white;
+    background-color: black;
+    width: 100px;
+    text-align: center;
+   
+    padding: 18px; 60px;
+    border-radius: 8px;
+  
 }
 
-.images, .text {
-    display: grid;
-    grid-template-columns: repeat(1, 1fr);
-    grid-gap: 20px;
-}
-
-.img-1, .img-2, .img-3; {
-    grid-column: 1 / span 1;
-}
-
-@media screen and (min-width: 900px) {
-    .images {
-        grid-template-columns: repeat(4, 1fr);
-        grid-gap: 30px;
-    }
-    .text {
-        grid-template-columns: repeat(2, 1fr);
-    }
-    .img-1 {
-        grid-column: 1 / span 2;
-    }
-    .img-2 {
-        grid-column: 4 / span 1;
-    }
-    .img-3 {
-        grid-column: 2 / span 1;
-    }
+.more:hover {
+    background-color: #00FFEA;
+    color: #121212;
+    border-radius: 6px;
 }
 
 body {
-    font-family: "Arial";
+    font-family: Arial, sans-serif;
     font-size: 18px;
+    padding: 15px;
+    background-color: #E4E4E4;
+    text-decoration-color:  #121212;
 }
 
+/*Japan*/
+
 h1 {
-    font-size: 3em
+    font-weight: normal;
+    font-size: 3em; 
+    text-decoration-color:  #121212;
+        
+}
+.japan {
+    grid-column: 1 / 5;
+    padding-top: 40px;
+    padding-bottom: 60px;
+    font-size: 2em;
+}
+
+/* Images */
+
+.images {
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-gap: 2em;
+}
+.img-4 {
+    grid-column: 1 / span 2;
+}
+
+.img-3 {
+    grid-column: 4 / span 1; 
+}
+.img-1 {
+    grid-column: 3 / span 1;
+}
+.img-2 {
+    grid-column: 2 / span 1;
+}  
+
+/* Tokio */
+
+h2 { 
+    font-weight: normal;
+    font-size: 18px;
+    grid-column: 1;
+}
+.tokio {
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-gap: 2em;
+    padding-top: 40px;
+    padding-bottom: 60px;
+}
+
+.tokiotext {
+    grid-column: 3 / span 2;
+}
+
+/* Footer */
+
+.footer a {
+    color: black
+}
+
+.footer-3, footer-4 {
+    text-decoration: none;
+}
+
+.footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    font-size: 18px;
+    padding-top: 30px;
+}
+/* Mobile */
+
+@media all and (max-width:800px) {
+
+.more { 
+    top: 60px; 
+    right: 30px;
+}
+
+body {
+    font-size: 1.5em
+    padding: 15px;
+}
+
+h1 { 
+    font-size: 1.5em;
+    padding-bottom: 40px;
+}
+.images { 
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 20px;
+    padding-bottom: 40px;
+}
+.img-1 {
+    grid-column: 1 / span 4;
+}
+.img-2 {
+    grid-column: 1/ span 4;
+}
+.img-3 {
+    grid-column: 1 / span 4; 
+}   
+.img-4 {
+    grid-column: 1 /span 4;
+}
+    
+h2 { 
+    font-size: 1.5em;
+}
+    
+.tokio {
+    display:block;
+    grid-template-columns: repeat(1,1fr);
+    padding-top: 20px;
+    padding-bottom: 40px;
+    font-size: 1.5em;
+}
+    
+.tokiotext {
+    padding-top: 20px;
+}
+    
+.footer {
+    display: flex;
+    flex-direction: column;
+    justify-content:space-evenly;
+    font-size: 1.5em;
+    padding-top: 20px;
+}    
 }
